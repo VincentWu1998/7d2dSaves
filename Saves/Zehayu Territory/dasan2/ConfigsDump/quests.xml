@@ -298,7 +298,7 @@
 
 		<requirement type="Group" value="OR" phase="1">
 			<requirement type="Buff" id="buffBeer" />
-			<requirement type="Buff" id="buffBeer" />
+			<requirement type="Buff" id="buffDrunkGrandpasMoonshine" />
 		</requirement>
 
 		<objective type="InteractWithNPC">

@@ -16,7 +16,7 @@
 			<display_entry name="MagazineSize" title_key="statMagazineSize" />
 			<display_entry name="RoundsPerMinute" title_key="statRoundsPerMinute" />
 			<display_entry name="DamageFalloffRange" title_key="statDamageFalloffRange" />
-			<display_entry name="DegradationMax" title_key="statDegradationMax" />
+			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="perkBoomstick" />
 			<display_entry name="dStatStunEffect" title_key="statStunEffect" display_type="Time" />
 		</item_display_info>
 
@@ -81,7 +81,7 @@
 		<item_display_info display_type="motorTool" display_group="groupMelee">
 			<display_entry name="EntityDamage" title_key="statEntityDamageMelee" />
 			<display_entry name="BlockDamage" title_key="statBlockDamage" />
-			<display_entry name="MagazineSize" title_key="statMagazineSize" />
+			<display_entry name="MagazineSize" title_key="statFuelCapacity" />
 			<display_entry name="RoundsPerMinute" title_key="statAttacksPerMinute" />
 			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="perkMiner69r,admin" />
 		</item_display_info>
@@ -481,6 +481,7 @@
 		<item_display_info display_type="medical" display_group="groupConsumables">
 			<display_entry name="maxHealthAmount" title_key="statMaxHealthAmount" />
 			<display_entry name="foodHealthAmount" title_key="statHealthAmount" />
+			<display_entry name="dStopsBleeding" title_key="statStopsBleeding" display_type="Bool" />
 		</item_display_info>
 
 		<item_display_info display_type="medicalVitamins" display_group="groupConsumables">

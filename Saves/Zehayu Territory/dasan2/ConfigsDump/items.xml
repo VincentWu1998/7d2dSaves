@@ -2466,7 +2466,7 @@ Mesh files no longer used:
 
 <item name="meleeToolHoeIron"> <!-- T2 farming -->
 	<property name="Tags" value="melee,medium,tool,attFortitude,perkLivingOffTheLand,canHaveCosmetic" />
-	<property name="DisplayType" value="melee" />
+	<property name="DisplayType" value="melee" /><property name="CreativeMode" value="None" />
 	<property name="HoldType" value="50" />
 	<property name="Meshfile" value="#Other/Items?Tools/hoe_ironPrefab.prefab" />
 	<property name="Material" value="Mmetal" />
@@ -5315,6 +5315,7 @@ Mesh files no longer used:
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 	<property name="Material" value="Mbrass" />
+	<property name="MeltTimePerUnit" value=".4" />
 	<property name="Stacknumber" value="300" /> <!-- STK ammo high -->
 	<property name="EconomicValue" value="9" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -5496,7 +5497,7 @@ Mesh files no longer used:
 	<property name="HoldType" value="45" />
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
-	<property name="Material" value="Mbrass" />
+	<property name="Material" value="MresourceScrapPolymers" />
 	<property name="Stacknumber" value="150" /> <!-- STK ammo low -->
 	<property name="EconomicValue" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -5530,7 +5531,7 @@ Mesh files no longer used:
 	<property name="HoldType" value="45" />
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
-	<property name="Material" value="Mbrass" />
+	<property name="Material" value="MresourceScrapPolymers" />
 	<property name="Stacknumber" value="150" /> <!-- STK ammo low -->
 	<property name="EconomicValue" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -8516,7 +8517,7 @@ add knockdown resist to armor
 
 <item name="apparelGhillieSuitHood">
 	<property name="Extends" value="apparelPlantFiberMaster" param1="CustomIcon" />
-	<property name="UnlockedBy" value="perkSniperGhost" />
+	<property name="UnlockedBy" value="perkSniperComplete" />
 	<property name="Tags" value="head,clothing,canHaveCosmetic" />
 	<property name="EquipSlot" value="Head" />
 	<property name="DisplayType" value="clothingGhillieHood" />
@@ -8562,7 +8563,7 @@ perkNightStalkerSilentNight
 
 <item name="apparelGhillieSuitPants">
 	<property name="Extends" value="apparelPlantFiberMaster" param1="CustomIcon" />
-	<property name="UnlockedBy" value="perkSniperGhost" />
+	<property name="UnlockedBy" value="perkSniperComplete" />
 	<property name="Tags" value="legs,clothing,pocketMod,canHaveCosmetic" /> <!-- clothing = dyeable -->
 	<property name="EquipSlot" value="Legs" />
 	<property name="DisplayType" value="clothingGhillie" />
@@ -8588,7 +8589,7 @@ perkNightStalkerSilentNight
 
 <item name="apparelGhillieSuitJacket">
 	<property name="Extends" value="apparelPlantFiberMaster" param1="CustomIcon" />
-	<property name="UnlockedBy" value="perkSniperGhost" />
+	<property name="UnlockedBy" value="perkSniperComplete" />
 	<property name="Tags" value="chest,clothing,pocketMod,canHaveCosmetic" />
 	<property name="EquipSlot" value="Chest" />
 	<property name="DisplayType" value="clothingGhillie" />
@@ -9881,7 +9882,7 @@ perkNightStalkerSilentNight
 		<display_value name="foodHealthAmount" value="5" />
 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables" />
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding" />
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding" /><display_value name="dStopsBleeding" value="1" />
 
 		<!-- used on other -->
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthAmount" operation="add" value="3" /> <!-- X -->
@@ -9934,7 +9935,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthIncrease" operation="set" value="@medicPerkIncrease" />
 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables" />
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding" />
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding" /><display_value name="dStopsBleeding" value="1" />
 
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthAmount" operation="add" value="15" /> <!-- X -->
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.25">
@@ -10009,8 +10010,7 @@ perkNightStalkerSilentNight
 		<display_value name="foodHealthAmount" value="30" />
 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables" />
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding" />
-
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding" /><display_value name="dStopsBleeding" value="1" />
 
 		<!-- used on other -->
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthAmount" operation="add" value="25" /> <!-- X -->
@@ -10031,7 +10031,6 @@ perkNightStalkerSilentNight
 
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffProcessConsumables" />
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding" />
-
 	</effect_group>
 
 	<effect_group tiered="false">
@@ -10100,7 +10099,7 @@ perkNightStalkerSilentNight
 		<display_value name="foodHealthAmount" value="180" />
 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables" />
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding" />
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding" /><display_value name="dStopsBleeding" value="1" />
 
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthAmount" operation="add" value="90" /> <!-- X -->
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.25">
@@ -12704,7 +12703,7 @@ perkNightStalkerSilentNight
 <!--todo remove this -->
 <item name="meleeToolHoeIronSchematic">
 	<property name="Extends" value="schematicMaster" />
-	<property name="CreativeMode" value="Player" />
+	<property name="CreativeMode" value="None" />
 	<property name="CustomIcon" value="meleeToolHoeIron" />
 	<property name="Unlocks" value="meleeToolHoeIron" />
 	<effect_group tiered="false">
@@ -15396,6 +15395,7 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 	<property name="Material" value="MresourceScrapBrassSmall" />
+	<property name="MeltTimePerUnit" value=".4" />
 	<property name="Stacknumber" value="6000" /> <!-- STK resource -->
 	<property name="Weight" value="1" />
 	<property name="EconomicValue" value="20" />
@@ -15686,6 +15686,7 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 	<property name="Material" value="MresourceScrapBrassSmall" />
+	<property name="MeltTimePerUnit" value=".4" />
 	<property name="Stacknumber" value="1000" />
 	<property name="EconomicValue" value="10" />
 	<property name="EconomicBundleSize" value="10" />
@@ -15852,8 +15853,9 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 	<property name="Material" value="MresourceScrapBrassMedium" />
+	<property name="MeltTimePerUnit" value=".4" />
 	<property name="Stacknumber" value="250" /> <!-- STK loot -->
-	<property name="Weight" value="20" />
+	<property name="Weight" value="50" />
 	<property name="EconomicValue" value="40" />
 	<property name="Group" value="Resources" />
 </item>
@@ -15865,8 +15867,9 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 	<property name="Material" value="MresourceScrapBrassMedium" />
+	<property name="MeltTimePerUnit" value=".4" />
 	<property name="Stacknumber" value="250" /> <!-- STK loot -->
-	<property name="Weight" value="60" />
+	<property name="Weight" value="150" />
 	<property name="EconomicValue" value="120" />
 	<property name="Group" value="Resources" />
 </item>
@@ -15878,8 +15881,9 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 	<property name="Material" value="MresourceScrapBrassLarge" />
+	<property name="MeltTimePerUnit" value=".4" />
 	<property name="Stacknumber" value="5" /> <!-- STK loot -->
-	<property name="Weight" value="100" />
+	<property name="Weight" value="250" />
 	<property name="EconomicValue" value="200" />
 	<property name="Group" value="Resources" />
 </item>
@@ -15904,8 +15908,9 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 	<property name="Material" value="MresourceScrapBrassMedium" />
+	<property name="MeltTimePerUnit" value=".4" />
 	<property name="Stacknumber" value="250" /> <!-- STK loot -->
-	<property name="Weight" value="20" />
+	<property name="Weight" value="50" />
 	<property name="EconomicValue" value="40" />
 	<property name="Group" value="Resources" />
 </item>
@@ -16062,6 +16067,7 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 	<property name="Material" value="MresourceScrapBrassSmall" />
+	<property name="MeltTimePerUnit" value=".4" />
 	<property name="Weight" value="1" />
 	<property name="Stacknumber" value="20000" /> <!-- STK resource -->
 	<property name="EconomicValue" value="5" />
@@ -16264,6 +16270,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="unit_iron" />
 	<property name="CustomIcon" value="resourceScrapBrass" />
 	<property name="Material" value="Mbrass" />
+	<property name="MeltTimePerUnit" value=".4" />
 	<property name="CreativeMode" value="None" />
 </item>
 
@@ -16862,10 +16869,6 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 	<property name="Material" value="Msteel" />
-	<property name="Weight" value="0" />
-	<property name="Stacknumber" value="250" />
-	<property name="EconomicValue" value="35" />
-	<property name="Group" value="Chemicals" />
 	<property name="DescriptionKey" value="deprecatedBlockDesc" />
 </item>
 

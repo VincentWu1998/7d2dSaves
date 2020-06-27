@@ -6,7 +6,7 @@
 
 	<npc_info id="traderhugh" name="Trader Hugh" name_key="npc_traderHugh" faction="whiteriver" portrait="npc_hugh" greeting_type="nearby" stance="Neutral" voice_set="trader" trader_id="1" dialog_id="trader" />
 		
-	<npc_info id="traderjen" name="Trader Jen" name_key="npc_traderJen" faction="whiteriver" portrait="npc_jen" greeting_type="nearby" stance="Like" voice_set="trader" trader_id="1" dialog_id="trader" />
+	<npc_info id="traderjen" name="Trader Jen" name_key="npc_traderJen" faction="whiteriver" portrait="npc_jen" greeting_type="nearby" stance="Like" voice_set="trader_jen" trader_id="1" dialog_id="trader" />
 		
 	<npc_info id="traderbob" name="Trader Bob" name_key="npc_traderBob" faction="whiteriver" portrait="npc_bob" greeting_type="nearby" stance="Like" voice_set="trader" trader_id="1" dialog_id="trader" />
 		

@@ -91,6 +91,10 @@
 			<window name="popupMenu" />
 		</window_group>
 		
+		<window_group name="interactionPrompt" actionSet="false">
+			<window name="interactionPrompt" />
+		</window_group>
+		
 		<window_group name="tipWindow">
 			<window name="windowTip" />
 		</window_group>

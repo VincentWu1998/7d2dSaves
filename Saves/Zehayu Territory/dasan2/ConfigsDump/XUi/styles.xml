@@ -42,6 +42,7 @@
 		
 		<!--NAMED SOUNDS-->
 		<style_entry name="default_click" value="Sounds/UI/ui_menu_click" />
+		<style_entry name="default_hover" value="Sounds/UI/ui_hover" />
 		<style_entry name="start" value="Sounds/UI/ui_menu_start" />
 		<style_entry name="back" value="Sounds/UI/ui_menu_back" />
 		<style_entry name="craft_click" value="Sounds/Crafting/craft_click_craft" />
@@ -55,7 +56,7 @@
 	<!--LABELS-->
 	<style type="label">
 		<style_entry name="color" value="[labelColor]" />
-		<style_entry name="font_face" value="AgencyB_32p" />
+		<style_entry name="font_face" value="ReferenceFont" />
 		<style_entry name="font_size" value="28" />
 		<style_entry name="justify" value="left" />
 		<style_entry name="effect" value="none" />
@@ -66,7 +67,7 @@
 	
 	<style type="textlist">
 		<style_entry name="color" value="[labelColor]" />
-		<style_entry name="font_face" value="AgencyB_32p" />
+		<style_entry name="font_face" value="ReferenceFont" />
 		<style_entry name="font_size" value="28" />
 		<style_entry name="justify" value="left" />
 		<style_entry name="effect" value="none" />

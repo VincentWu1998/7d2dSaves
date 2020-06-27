@@ -240,7 +240,7 @@ Textures we might want for (terrain) imposters
 
 <paint id="33" name="txName_stones_large">
 	<property name="TextureId" value="600" />
-	<property name="Group" value="txGroupWood" />
+	<property name="Group" value="txGroupMasonry" />
 	<property name="PaintCost" value="1" />
 </paint>
 
@@ -406,11 +406,10 @@ Textures we might want for (terrain) imposters
 	<property name="PaintCost" value="1" />
 </paint>
 
-<paint id="61" name="txName_Drywall_tan_baseboard">
-	<property name="TextureId" value="216" />
-	<property name="Group" value="txGroupMasonry" />
+<paint id="61" name="txName_bookcaseFull">
+	<property name="TextureId" value="67" />
+	<property name="Group" value="txGroupDecoration" />
 	<property name="PaintCost" value="1" />
-	<property name="Hidden" value="true" />
 </paint>
 
 <paint id="62" name="txName_Drywall_ceiling">
@@ -891,7 +890,6 @@ Textures we might want for (terrain) imposters
 	<property name="TextureId" value="571" />
 	<property name="Group" value="txGroupWood" />
 	<property name="PaintCost" value="3" />
-	<property name="Hidden" value="true" />
 </paint>
 
 <paint id="149" name="txName_Storage_generic">

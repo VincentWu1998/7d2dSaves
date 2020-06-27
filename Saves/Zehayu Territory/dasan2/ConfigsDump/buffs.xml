@@ -833,10 +833,18 @@ List of hacks to be removed:
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="add" value="30" />
 
 			<!-- perkSlowMetabolism : buff duration update -->
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value=".1" />
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="multiply" value="@$MetabolismResist" />
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="add" value="1" />
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="1" operation="divide" value="@$MetabolismDuration" />
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value="1">
+				<requirement name="ProgressionLevel" progression_name="perkSlowMetabolism" operation="Equals" value="0" /></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value=".909">
+				<requirement name="ProgressionLevel" progression_name="perkSlowMetabolism" operation="Equals" value="1" /></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value=".833">
+				<requirement name="ProgressionLevel" progression_name="perkSlowMetabolism" operation="Equals" value="2" /></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value=".769">
+				<requirement name="ProgressionLevel" progression_name="perkSlowMetabolism" operation="Equals" value="3" /></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value=".714">
+				<requirement name="ProgressionLevel" progression_name="perkSlowMetabolism" operation="Equals" value="4" /></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value=".667">
+				<requirement name="ProgressionLevel" progression_name="perkSlowMetabolism" operation="Equals" value="5" /></triggered_effect>
 
 			<!-- perkPhysician update -->
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="healthPerkIncrease" operation="set" value="2">
@@ -4464,7 +4472,7 @@ icon="ui_game_symbol_pack_mule"
 			<passive_effect name="EntityDamage" operation="perc_add" value="4">
 				<requirement name="HoldingItemHasTags" tags="ranged" />
 			</passive_effect>
-			<passive_effect name="WaterChangeOT" operation="base_subtract" value="1" />
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value=".65" />
 		</effect_group>
 
 		<effect_group>
@@ -4522,7 +4530,7 @@ icon="ui_game_symbol_pack_mule"
 			<passive_effect name="PhysicalDamageResist" operation="base_add" value="50" tags="coredamageresist" />
 			<passive_effect name="HyperthermalResist" operation="base_add" value="50" />
 			<passive_effect name="HypothermalResist" operation="base_add" value="50" />
-			<passive_effect name="WaterChangeOT" operation="base_subtract" value="1" />
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value=".25" />
 		</effect_group>
 
 		<effect_group>
